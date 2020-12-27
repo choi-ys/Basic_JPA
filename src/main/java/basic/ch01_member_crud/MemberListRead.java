@@ -32,6 +32,8 @@ public class MemberListRead {
             for (Member member : memberList){
                 System.out.println(member.getId() + " -> " + member.getName());
             }
+
+            entityTransaction.commit();
         } catch (Exception e) {
             entityTransaction.rollback();
             e.printStackTrace();
