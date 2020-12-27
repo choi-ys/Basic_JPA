@@ -10,24 +10,20 @@ import static basic.config.EntityManagerGenerator.generateEntityManager;
 
 /**
  * 용석 : 2020-12-28 (월)
- * EntityManager를 이용한 Mmember객체 조회
+ * EntityManager를 이용한 Mmember객체 수정
  */
-public class MemberRead {
+public class EX_03_MemberUpdate {
 
     public static void main(String[] args) {
         EntityManager entityManager = generateEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
 
-        long memberId = 4L;
+        long memberId = 2L;
 
         try {
             Member member = entityManager.find(Member.class, memberId);
-            if(member != null){
-                System.out.println(member.getId() + " -> " + member.getName());
-            }else{
-                System.out.println("404 NotFound -> memberId : " + memberId);
-            }
+            member.setName("changed Name");
 
             entityTransaction.commit();
         } catch (Exception e) {
@@ -38,5 +34,4 @@ public class MemberRead {
         }
         closeEntityManagerFactiory();
     }
-
 }
