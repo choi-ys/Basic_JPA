@@ -5,32 +5,28 @@ import domain.entity.Member;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import java.util.List;
-
 import static basic.config.EntityManagerGenerator.closeEntityManagerFactiory;
 import static basic.config.EntityManagerGenerator.generateEntityManager;
 
 /**
  * 용석 : 2020-12-28 (월)
- * EntityManager의 JPQL을 이용한 Mmember목록 조회
+ * EntityManager를 이용한 Mmember객체 조회
  */
-public class MemberListRead {
+public class EX_02_MemberRead {
 
     public static void main(String[] args) {
         EntityManager entityManager = generateEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
 
-        int offset = 0;
-        int limit = 2;
+        long memberId = 4L;
 
         try {
-            List<Member> memberList = entityManager.createQuery("select m from Member as m")
-                    .setFirstResult(offset)
-                    .setMaxResults(limit)
-                    .getResultList();
-            for (Member member : memberList){
+            Member member = entityManager.find(Member.class, memberId);
+            if(member != null){
                 System.out.println(member.getId() + " -> " + member.getName());
+            }else{
+                System.out.println("404 NotFound -> memberId : " + memberId);
             }
 
             entityTransaction.commit();
@@ -42,4 +38,5 @@ public class MemberListRead {
         }
         closeEntityManagerFactiory();
     }
+
 }

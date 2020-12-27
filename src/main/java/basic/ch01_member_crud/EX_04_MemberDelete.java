@@ -10,20 +10,21 @@ import static basic.config.EntityManagerGenerator.generateEntityManager;
 
 /**
  * 용석 : 2020-12-28 (월)
- * EntityManager를 이용한 Mmember객체 수정
+ * EntityManager를 이용한 Mmember객체 삭제
  */
-public class MemberUpdate {
+public class EX_04_MemberDelete {
 
     public static void main(String[] args) {
         EntityManager entityManager = generateEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
 
-        long memberId = 2L;
+        long memberId = 4L;
 
         try {
             Member member = entityManager.find(Member.class, memberId);
-            member.setName("changed Name");
+
+            entityManager.remove(member);
 
             entityTransaction.commit();
         } catch (Exception e) {
