@@ -50,7 +50,7 @@ public class EX_02_FlushModeOption {
             entityManager.close();
         }
 
-        EntityManagerGenerator.closeEntityManagerFactiory();
+        EntityManagerGenerator.closeEntityManagerFactory();
     }
 }
 

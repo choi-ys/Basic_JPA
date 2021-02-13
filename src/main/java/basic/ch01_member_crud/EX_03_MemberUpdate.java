@@ -5,7 +5,7 @@ import domain.entity.Member;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import static basic.config.EntityManagerGenerator.closeEntityManagerFactiory;
+import static basic.config.EntityManagerGenerator.closeEntityManagerFactory;
 import static basic.config.EntityManagerGenerator.generateEntityManager;
 
 /**
@@ -32,6 +32,6 @@ public class EX_03_MemberUpdate {
         } finally {
             entityManager.close();
         }
-        closeEntityManagerFactiory();
+        closeEntityManagerFactory();
     }
 }
