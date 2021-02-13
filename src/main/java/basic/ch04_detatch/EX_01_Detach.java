@@ -40,6 +40,6 @@ public class EX_01_Detach {
         } finally {
             entityManager.close();
         }
-        EntityManagerGenerator.closeEntityManagerFactiory();
+        EntityManagerGenerator.closeEntityManagerFactory();
     }
 }

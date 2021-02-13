@@ -53,6 +53,6 @@ public class EX_02_Clear {
         } finally {
             entityManager.close();
         }
-        EntityManagerGenerator.closeEntityManagerFactiory();
+        EntityManagerGenerator.closeEntityManagerFactory();
     }
 }

@@ -33,6 +33,14 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.195</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- postgreSQL -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.16</version>
             <scope>runtime</scope>
         </dependency>
 

@@ -68,6 +68,6 @@ public class EX_01_Flush {
             entityManager.close();
         }
 
-        EntityManagerGenerator.closeEntityManagerFactiory();
+        EntityManagerGenerator.closeEntityManagerFactory();
     }
 }

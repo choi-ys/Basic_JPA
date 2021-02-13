@@ -7,7 +7,7 @@ import javax.persistence.EntityTransaction;
 
 import java.util.List;
 
-import static basic.config.EntityManagerGenerator.closeEntityManagerFactiory;
+import static basic.config.EntityManagerGenerator.closeEntityManagerFactory;
 import static basic.config.EntityManagerGenerator.generateEntityManager;
 
 /**
@@ -40,6 +40,6 @@ public class EX_05_MemberListRead_With_JPQL {
         } finally {
             entityManager.close();
         }
-        closeEntityManagerFactiory();
+        closeEntityManagerFactory();
     }
 }

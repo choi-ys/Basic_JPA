@@ -26,7 +26,7 @@ public class EntityManagerGenerator {
         return entityManagerFactory.createEntityManager();
     }
 
-    public static void closeEntityManagerFactiory(){
+    public static void closeEntityManagerFactory(){
         entityManagerFactory.close();
     }
 
