@@ -42,6 +42,6 @@ public class EX_01_PrimaryKeyMapping {
             entityManager.close();
         }
 
-        EntityManagerGenerator.closeEntityManagerFactiory();
+        EntityManagerGenerator.closeEntityManagerFactory();
     }
 }

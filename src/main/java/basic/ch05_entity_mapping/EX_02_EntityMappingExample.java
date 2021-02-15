@@ -78,6 +78,6 @@ public class EX_02_EntityMappingExample {
         } finally {
             entityManager.close();
         }
-        EntityManagerGenerator.closeEntityManagerFactiory();
+        EntityManagerGenerator.closeEntityManagerFactory();
     }
 }
