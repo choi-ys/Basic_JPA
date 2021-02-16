@@ -65,7 +65,7 @@ public class ExampleEntity {
             name = "username"
             , nullable = false
             , length = 20
-            , columnDefinition = "varchar(100) default 'EMPTY' comment '컬럼 설명'"
+//            , columnDefinition = "varchar(100) default 'EMPTY' comment '컬럼 설명'"
             , insertable = false
             , updatable = false)
     private String columnAnnotationExampleFieldToString;
